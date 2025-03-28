@@ -1,0 +1,14 @@
+@startuml 
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(professor, "Professor", "Acessa o portal para gerenciar aulas, notas, frequências e materiais didáticos.")
+Person(aluno, "Aluno", "Utiliza o portal para visualizar suas notas, acessar conteúdos e realizar matrículas.")
+Person(administrador, "Administrador", "Gerencia o sistema, configurando permissões e usuários.")
+
+System(portalAluno, "Portal do Aluno", "Plataforma acadêmica utilizada por alunos, professores e administradores.")
+
+Rel(professor, portalAluno, "Utiliza", "Gerencia conteúdos, frequências de seus alunos e notas")
+Rel(aluno, portalAluno, "Utiliza", "Acompanha seu desempenho acadêmico")
+Rel(administrador, portalAluno, "Utiliza", "Administra o funcionamento do portal")
+
+@enduml
