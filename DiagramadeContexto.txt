@@ -1,0 +1,14 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(personAlias1, "Label", "Professor")
+Person(personAlias2, "Label", "Aluno")
+Person(personAlias3, "Label", "Administrador")
+
+
+System(systemPortalAluno, "Label", "Portal do Aluno")
+
+Rel(personAlias1,systemPortalAluno, "Label", "Utiliza")
+Rel(personAlias2,systemPortalAluno, "Label", "Utiliza")
+Rel(personAlias3,systemPortalAluno, "Label", "Utiliza")
+@enduml
